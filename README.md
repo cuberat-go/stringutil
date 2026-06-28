@@ -11,6 +11,7 @@ import "github.com/cuberat-go/stringutil"
 ## Index
 
 - [func SplitOnDelims\(s string, delims \[\]string, mergeDelim bool\) \[\]string](#SplitOnDelims)
+- [func SplitOnSpace\(s string, mergeDelim bool\) \[\]string](#SplitOnSpace)
 
 <a name="SplitOnDelims"></a>
 
@@ -21,5 +22,17 @@ func SplitOnDelims(s string, delims []string, mergeDelim bool) []string
 ```
 
 Splits the input string on any of the strings in the \`delims\` and returns a slice of the resulting substrings. If the input string is empty, returns an empty slice. If the input string does not contain any of the strings in the \`delims\`, returns a slice containing the input string as the only element. If mergeDelim is true, multiple consecutive strings found from the \`delims\` are treated as a single delimiter.
+
+<a name="SplitOnSpace"></a>
+
+## func [SplitOnSpace](https://github.com/cuberat-go/stringutil/blob/main/split.go#L46)
+
+```go
+func SplitOnSpace(s string, mergeDelim bool) []string
+```
+
+Splits the input string on any whitespace characters and returns a slice of the resulting substrings. If the input string is empty, returns an empty slice. If the input string does not contain any whitespace characters, returns a slice containing the input string as the only element. If mergeDelim is true, multiple consecutive whitespace characters are treated as a single delimiter.
+
+The whitespace characters considered are: space, tab, newline, vertical tab, form feed, carriage return, non\-breaking space, and next line.
 
 <!-- gomarkdoc:embed:end -->
